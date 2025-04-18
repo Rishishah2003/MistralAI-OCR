@@ -46,7 +46,7 @@ if uploaded_file:
             pdf_response = client.ocr.process(
                 document=DocumentURLChunk(document_url=signed_url.url),
                 model="mistral-ocr-latest",
-                include_image_base64=False
+                include_image_base64=True
             )
 
         # Extract text
